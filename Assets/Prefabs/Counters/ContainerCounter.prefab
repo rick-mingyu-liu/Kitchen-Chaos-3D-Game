@@ -66,8 +66,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8054473117993682996}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+--- !u!1 &972048732044075954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 3660470111530534680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8054473117993682996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972048732044075954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fdb694a9f23247acb1cb26ec0cd9ca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &972048732044075955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192,
@@ -184,8 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6942e2043c8c642c38ffb3006562b214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenObjectSO: {fileID: 11400000, guid: 79c0a43a3a4be42e0b158e27f3ad214a, type: 2}
   counterTopPoint: {fileID: 261391020814859509}
+  kitchenObjectSO: {fileID: 11400000, guid: 79c0a43a3a4be42e0b158e27f3ad214a, type: 2}
 --- !u!1001 &5450887194010808814
 PrefabInstance:
   m_ObjectHideFlags: 0
