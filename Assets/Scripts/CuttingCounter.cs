@@ -12,7 +12,10 @@ public class CuttingCounter : BaseCounter
             // there is no kitchenObject here
             if (player.HasKitchenObject()) {
                 // player is carrying sth
-                player.GetKitchenObject().SetKitchenObjectParent(this);
+                if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectsSO())) {
+                    // player is carrying sth that can be cut
+                    player.GetKitchenObject().SetKitchenObjectParent(this);
+                }
             } else {
                 // player has nothing
             }
@@ -36,6 +39,15 @@ public class CuttingCounter : BaseCounter
 
             KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
         }
+    }
+
+    private bool HasRecipeWithInput(KitchenObjectsSO inputKitchenObjectSO) {
+        foreach (CuttingRecipeSO cuttingRecipeSO in cuttingRecipeSOArray) {
+            if (cuttingRecipeSO.input == inputKitchenObjectSO) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private KitchenObjectsSO GetOutputForInput(KitchenObjectsSO inputKitchenObjectSO) {
