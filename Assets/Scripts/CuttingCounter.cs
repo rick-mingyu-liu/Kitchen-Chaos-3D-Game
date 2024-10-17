@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CuttingCounter : MonoBehaviour
+public class CuttingCounter : BaseCounter
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Interact(Player player)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!HasKitchenObject()) {
+            // there is no kitchenObject here
+            if (player.HasKitchenObject()) {
+                // player is carrying sth
+                player.GetKitchenObject().SetKitchenObjectParent(this);
+            } else {
+                // player has nothing
+            }
+        } else {
+            // there is kitchenObject here
+            if (player.HasKitchenObject()) {
+                // player is carrying sth
+            } else {
+                // player is carrying nothing
+                GetKitchenObject().SetKitchenObjectParent(player);
+            }
+        }
     }
 }
