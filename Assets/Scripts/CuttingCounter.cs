@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CuttingCounter : BaseCounter
 {
+    [SerializeField] private KitchenObjectsSO cutKitchenObjectSO;
+
     public override void Interact(Player player)
     {
         if (!HasKitchenObject()) {
@@ -22,6 +24,17 @@ public class CuttingCounter : BaseCounter
                 // player is carrying nothing
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
+        }
+    }
+
+    public override void InteractAlternate(Player player)
+    {
+        if (HasKitchenObject()) {
+            // there is a KitchenObject here
+            GetKitchenObject().DestroySelf();
+
+            Transform kitchenObjectTransform = Instantiate(cutKitchenObjectSO.prefab);
+            kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(this);
         }
     }
 }
