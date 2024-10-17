@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fdb694a9f23247acb1cb26ec0cd9ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  containerCounter: {fileID: 5591173632118581844}
 --- !u!4 &972048732044075955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192,
