@@ -32,8 +32,8 @@ public class CuttingCounter : BaseCounter
 
     public override void InteractAlternate(Player player)
     {
-        if (HasKitchenObject()) {
-            // there is a KitchenObject here
+        if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectsSO())) {
+            // there is a KitchenObject here AND it can be cut
             KitchenObjectsSO outputKitchenObjectSO = GetOutputForInput(GetKitchenObject().GetKitchenObjectsSO());
             GetKitchenObject().DestroySelf();
 
