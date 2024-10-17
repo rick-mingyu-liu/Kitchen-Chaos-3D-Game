@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class ClearCounter : BaseCounter, IKitchenObjectParent {
+public class ContainerCounter : BaseCounter, IKitchenObjectParent {
 
     [SerializeField] private KitchenObjectsSO kitchenObjectSO;
     [SerializeField] private Transform counterTopPoint;
 
     private KitchenObject kitchenObject;
-
 
     public override void Interact(Player player) {
         if (!kitchenObject) {
@@ -22,6 +20,7 @@ public class ClearCounter : BaseCounter, IKitchenObjectParent {
         }
     }
 
+    
     public Transform GetKitchenObjectFollowTransform() {
         return counterTopPoint;
     }
