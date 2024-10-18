@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class CuttingRecipeSO : ScriptableObject
+public class BurningRecipeSO : ScriptableObject
 {
     public KitchenObjectsSO input;
     public KitchenObjectsSO output;
-    public float cuttingProgressMax;
+    public float burningTimerMax;
 
 }
