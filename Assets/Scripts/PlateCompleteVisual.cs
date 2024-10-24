@@ -21,7 +21,7 @@ public class PlateCompleteVisual : MonoBehaviour
 
         foreach (KitchenObjectSO_GameObject kitchenObjectSO_GameObject in kitchenObjectSO_GameObjectList) {
             kitchenObjectSO_GameObject.gameObject.SetActive(false);
-            Debug.Log($"{kitchenObjectSO_GameObject.gameObject.name} is set to inactive.");
+            // Debug.Log($"{kitchenObjectSO_GameObject.gameObject.name} is set to inactive.");
         }
     }
 
@@ -29,7 +29,7 @@ public class PlateCompleteVisual : MonoBehaviour
         foreach (KitchenObjectSO_GameObject kitchenObjectSO_GameObject in kitchenObjectSO_GameObjectList) {
             if (kitchenObjectSO_GameObject.kitchenObjectsSO == e.kitchenObjectsSO) {
                 kitchenObjectSO_GameObject.gameObject.SetActive(true);
-                Debug.Log($"{kitchenObjectSO_GameObject.gameObject.name} is set to active on ingredient added.");
+                // Debug.Log($"{kitchenObjectSO_GameObject.gameObject.name} is set to active on ingredient added.");
             }
         }
     }
