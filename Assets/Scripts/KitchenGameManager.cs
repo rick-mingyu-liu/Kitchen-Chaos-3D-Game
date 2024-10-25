@@ -67,4 +67,8 @@ public class KitchenGameManager : MonoBehaviour {
     public float GetCountDownToStartTimer() {
         return countDownToStartTimer;
     }
+
+    public bool IsGameOver() {
+        return state == State.GameOver;
+    }
 }
